@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="project" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="crowd-project">
+    <module name="atcrowdfunding13-member-project-consumer" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.lzt.crowd.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.lzt.crowd.CrowdMainClass" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

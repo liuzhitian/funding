@@ -1,0 +1,27 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: atguigu-crowd-pay
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: localhost
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+# 在配置文件中设置支付宝公钥等信息
+ali:
+  pay:
+    ali-pay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAncmU1Q8vftf2UStYuDluGwZJyi0lQS5kFoJ728TMcC4S4b+sSLO7fs+k+9Ou4r5bAoA+NAXTVq0XjG1jRGpScJMlsNjlZgQTA/Ux6PBEzP7jv1gaTy8Zd8MJaXL9uzLzS8fk3BTLeR5kxf2UmYp0D+TceKzfcOyBSNtAtbfRlDoFVFOyoaCrjr8d+qS+81qTpEtEU5NXX/t/KXW4zP5hIn1vvKewsO1RqnjwfxRHuXcrkHRaQzN/tj9vRtAaVLgL7sP0DcIZUauKkTZ5Z8jkelsbJYhu8CTnNtKa6H1ibBmn694jsuFgPIkEEaZaN5EaJ0Nad4aAqgOFsucz5ETfWwIDAQAB
+    app-id: 2021000117611942
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    merchant-private-key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQG69M46PoG82G8rSnem9vLAhW9U+Wvd4KVei5F3YuhDJs7c9E3/lgXILCaQUk/FsHlV753VudamT4H3MqcRUZDpudqRpJBNdE10UCEHI82/BOmoOV139QhT75d6JN3lojjxWPgRY3iohBuemNh8AmtrsBvZNXMFDzw65musXfB1gPoSOtpAaWFRWRVnj/LMN4eEHprC2NsbQswk8J1tNlKIRg4sSz8rN5uF+qk3wnEO4dgsJZjgnhpfIABUwigK/jKWszvK2pfxPXdV+pCn9wkortWbE+RBDyMfjoW9j+KA07Bl5AG3AW0fQ+JFb7qxYbJnpg1EHWF/Ep8TAVSFS5AgMBAAECggEANDrkgWCsQm75QeTrlxvoEYoLB8FndEIinOpgK92WBuwA/rv+eH8Y+lTtS5sWsz4HnCsGPld9YgNyzv9PFV3hALDrs+vbTAXGI/xF1aayUN6CLWsRMBjn2v5AQdibac+iKestLFLkA4NhOTkxrgs6mI14H/xez6YCYSdWKYOePeP3FbzMUKHDozBpiXelMYktfepNvyMXDOZ9X3LsYqJ9aP7NqUgwCVFYtZufmhWgcQ05CSGK+mY84km7/l1Ktsa8tSx6aUnuCIvLA5fJswf/KZGtS8TKMfuf5TMmTJ9jCQpBWFPtxU7/mXIs4LdgLC87FHLcvGsshgA/F3yMEGu40QKBgQDK2s/X9kDVuRw3SwTBX+oiQZXvtlm5z5TYX/+9msTBzx9yBO4mkE6QVbm+lg6ww3DIs4vl1rNQimaTBdEF1k9Vlu6WtmBxTImLun5azWkd7cvNLjwKSxly6Ww0BBR/ZizxuKzPHbbjs/wrcNv3FlgmuFryDv4zubd86gq+S2yrvQKBgQC13NHgj5tGR1tupwvLw3KJKykGlIbiD+Xj1G4z9C+WiHxXeZWyM57FDYJOuJKbDh6sj6Av1VJ4f0eUmwY12a0S/oV65eu23edttvULJKmfqLnXhZAGNySEvb0OMUm2xac16HFl6FNb76AId1xu0RRNv0RxuhExPm+5la7QwAq+rQKBgQCdHngH1QOIxpTVOvTW9nx5xgTlI39BzUeDhG+oIx0s5El93dW75uADKXLx7HY6cVaFDZRZFD/VLS2fyMyKUeEm8P2hnGb8uoR6xpshp6I4fTvyk1ILwvlWKPgXHeXme3RqUVkAHwrOOVUjLIojSppCe15tyDEaTUmSphBmLjNgnQKBgBJOcR3+tq2jXzPLQue2+9+M5atQ5ib5XLXLW3CFYwjvIj0X8xamFZRWYMiV0cQj7riGGKTX/147ybPOyxg+mipwTnVpkYmt2q7znMULYru8m0BzpGTLxjRKeS5ljbsFOGi3xjpw4Xs+qshPY5GQIFAXMceU6EghtdNjmt5OhoZdAoGAUQebiODh0RzDe+NqsyOlMJBiJ+IEyTj0nlEnjPjxUKfDP+MnN6BoeYdpam6ZqA99MYzkB38oHHAnwkU2S4f9J56WVRvRetpCvI4xcIvAc9Izj3/s0ZpWf9GkeSeS/nNiHlXzVi4FZ9qSKsHXgZB0eGVurYUbL6UYMPtma1zxESg=
+    notify-url: http://7ruqwq.natappfree.cc/pay/notify
+    return-url: http://7ruqwq.natappfree.cc/pay/return
+    sign-type: RSA2

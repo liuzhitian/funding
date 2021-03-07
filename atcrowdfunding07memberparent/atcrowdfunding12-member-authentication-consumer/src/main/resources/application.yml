@@ -1,0 +1,22 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: atguigu-crowd-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 127.0.0.1
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+short:
+  message:
+    appCode: 603632f08899438abbf4fc3a782bb002  # 这里就是购买得到的appCode
+    smsSignId: 2e65b1bb3d054466b82f0c9d125465e2
+    templateId: f5e68c3ad6b6474faa8cd178b21d3377
