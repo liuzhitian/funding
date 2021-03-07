@@ -13,8 +13,10 @@
 atcrowdfunding01adminparent中为所有后台模块的父类，在它的里面：
 * atcrowdfunding02-admin-webui是最后打war包的,里面包括所有的controller，所有配置文件，以及网站web网络资源
 * 03是业务逻辑层和持久化层相关的代码 04是实体类
+
 不属于任何模块的两个模块：
 * 05是工具包 06是逆向mybatis的模块
+
 atcrowdfunding07memberparent是所有前台模块的父类，在它的里面
 * 08是eureka微服务，是前台微服务的注册中心
 * 09是实体类，
